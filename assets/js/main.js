@@ -235,7 +235,7 @@
       });
     });
 
-    ScrollTrigger.batch('.card, .bench__item, .row', {
+    ScrollTrigger.batch('.card, .bench__item, .community__note', {
       start: 'top 90%',
       onEnter: function (batch) {
         gsap.fromTo(batch,
@@ -243,7 +243,7 @@
           { y: 0, autoAlpha: 1, rotate: 0, duration: 1.1, stagger: 0.08, ease: 'power3.out', overwrite: true });
       }
     });
-    gsap.set('.card, .bench__item, .row', { autoAlpha: 0 });
+    gsap.set('.card, .bench__item, .community__note', { autoAlpha: 0 });
 
     gsap.from('.contact__line', {
       yPercent: 60, autoAlpha: 0, duration: 1.2, stagger: 0.12, ease: 'expo.out',

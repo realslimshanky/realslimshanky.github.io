@@ -33,32 +33,5 @@ window.WORKBENCH = [
     blurb: "ML Zoomcamp midterm project, from notebook exploration to a trained model.",
     tags: ["Python", "Jupyter", "ML"],
     links: [{ label: "Repo", href: "https://github.com/realslimshanky/Hearty" }]
-  },
-  {
-    title: "Simple Telegram Chatbot",
-    year: "2021",
-    status: "shipped",
-    emoji: "💬",
-    blurb: "A minimal starter for getting a Telegram chatbot running quickly.",
-    tags: ["Python", "Telegram"],
-    links: [{ label: "Repo", href: "https://github.com/realslimshanky/simple-telegram-chatbot" }]
-  },
-  {
-    title: "Termux Python",
-    year: "2017",
-    status: "shipped",
-    emoji: "📱",
-    blurb: "Python experiments running on Android, straight from Termux.",
-    tags: ["Python", "Android"],
-    links: [{ label: "Repo", href: "https://github.com/realslimshanky/termuxpython" }]
-  },
-  {
-    title: "open2017",
-    year: "2016",
-    status: "shipped",
-    emoji: "🎆",
-    blurb: "A landing page for a New Year's Eve 2017 live stream.",
-    tags: ["Web"],
-    links: [{ label: "Repo", href: "https://github.com/realslimshanky/open2017" }]
   }
 ];
