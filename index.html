@@ -1,204 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shashank Kumar — Software Engineer</title>
   <meta name="description" content="Shashank Kumar (realslimshanky) — software engineer in Berlin. Data pipelines at scale, durable workflows and applied AI." />
-  <meta name="theme-color" content="#0c0b0a" />
+  <meta name="theme-color" content="#101214" />
   <meta property="og:title" content="Shashank Kumar — Software Engineer" />
   <meta property="og:description" content="Software engineer in Berlin. Data pipelines at scale, durable workflows and applied AI." />
   <meta property="og:url" content="https://shanky.dev/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b0a'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='40' fill='%23ff5a1f'%3Es%3C/text%3E%3C/svg%3E" />
-
-  <script>
-    // Apply saved theme before paint to avoid a flash.
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-    } catch (e) {}
-    document.documentElement.classList.add('js');
-    // Failsafe: if the animation libraries never arrive, show the content.
-    window.addEventListener('load', function () {
-      if (!window.gsap) document.documentElement.classList.remove('js');
-    });
-  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101214'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='ui-monospace,Menlo,monospace' font-weight='700' font-size='38' fill='%23e8a033'%3Es%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
-  </script>
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"><span></span></div>
+  <div class="frame">
 
-  <!-- ───────────── Nav ───────────── -->
-  <header class="nav">
-    <a class="nav__mark" href="#top" aria-label="Back to top">s<em>k</em></a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#work"><span class="mono">01</span> Work</a>
-      <a href="#workbench"><span class="mono">02</span> Workbench</a>
-      <a href="#community"><span class="mono">03</span> Community</a>
-      <a href="#contact"><span class="mono">04</span> Contact</a>
-    </nav>
-    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-      <span class="theme-toggle__dot"></span>
-      <span class="mono theme-toggle__label">dark mode</span>
-    </button>
-  </header>
+    <!-- ───────────── Run header ───────────── -->
+    <header class="runbar">
+      <span class="who">shashank-kumar</span>
+      <span aria-hidden="true">·</span>
+      <span>berlin</span>
+      <span class="pill">PYTHON SINCE 2014</span>
+      <span>@realslimshanky</span>
+    </header>
 
-  <main id="top">
     <!-- ───────────── Hero ───────────── -->
     <section class="hero" aria-label="Introduction">
-      <canvas class="hero__canvas" aria-hidden="true"></canvas>
-
-      <div class="hero__meta hero__meta--top mono">
-        <span><i class="pulse"></i> Available for interesting problems</span>
-        <span class="hide-sm">52.52° N, 13.40° E</span>
-      </div>
-
-      <h1 class="hero__title">
-        <span class="hero__line"><span class="hero__word">Shashank</span></span>
-        <span class="hero__line hero__line--indent"><span class="hero__word serif">Kumar<span class="accent">.</span></span></span>
-      </h1>
-
-      <div class="hero__bottom">
-        <p class="hero__lede">
-          Software engineer in Berlin, building data pipelines that scale
-          <span class="serif">&amp; applied AI trained for the job.</span>
-        </p>
-        <div class="hero__meta mono">
-          <span>Berlin <span class="clock" data-tz="Europe/Berlin">--:--</span></span>
-          <span>@realslimshanky</span>
-          <a class="hero__scroll" href="#about">Scroll <span aria-hidden="true">↓</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────── Marquee ───────────── -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Applied AI</span><i>✺</i><span class="serif">Temporal</span><i>✺</i><span>Async Python</span><i>✺</i>
-        <span class="serif">Data pipelines at scale</span><i>✺</i><span>PostgreSQL</span><i>✺</i><span class="serif">MongoDB</span><i>✺</i>
-        <span>Fine-tuned models</span><i>✺</i><span class="serif">Web data</span><i>✺</i>
-      </div>
-    </div>
-
-    <!-- ───────────── About ───────────── -->
-    <section class="about" id="about">
-      <p class="eyebrow mono">(00) — Hello</p>
-      <p class="about__statement" data-reveal-words>
-        I have been shipping on GitHub for over a decade, mostly in Python. These days
-        I build <em>durable workflows and data pipelines that scale</em>, and train
-        models for the specific problem in front of me, not the general one. Off the
-        clock I tinker with side projects and look for a good meetup. And yes, I write
-        code in dark mode.
+      <h1>ingest <span class="arrow" aria-hidden="true">→</span> transform <span class="arrow" aria-hidden="true">→</span> serve<span class="sub">without waking anyone at 3am.</span></h1>
+      <p class="hero__lede">
+        Software engineer in Berlin. A decade of shipping in Python, mostly
+        <b>durable workflows and data pipelines that scale</b> — plus models trained
+        for the specific problem in front of me, not the general one.
       </p>
-      <dl class="about__stats">
-        <div><dt class="mono">Since</dt><dd data-count="2014">2014</dd></div>
-        <div><dt class="mono">Public repos</dt><dd data-count="114">114</dd></div>
-        <div><dt class="mono">Based in</dt><dd class="serif">Berlin</dd></div>
-      </dl>
     </section>
 
-    <!-- ───────────── Selected work (bento) ───────────── -->
-    <section class="work" id="work">
-      <header class="section-head">
-        <p class="eyebrow mono">(01) — Selected work</p>
-        <h2 class="section-title">Things that <span class="serif">earned their keep.</span></h2>
-      </header>
+    <!-- ───────────── Steps ─────────────
+         The rail is drawn by .pipeline::before; each <section class="step">
+         puts a node on it. Add a step by copying one block.
+    -->
+    <div class="pipeline">
 
-      <div class="bento bento--duo">
-        <a class="card card--xl" href="https://github.com/realslimshanky/Spider-Sense" target="_blank" rel="noopener">
-          <div class="card__top mono"><span>2019 — 2025</span><span>Browser extension</span></div>
-          <div class="card__art card__art--radar" aria-hidden="true">
-            <span></span><span></span><span></span><i></i>
-          </div>
-          <div class="card__body">
+      <section class="step step--live" id="work">
+        <div class="step__head">
+          <h2>what i do</h2>
+          <span class="label">step 01 · ongoing</span>
+        </div>
+        <dl class="stack">
+          <dt>orchestration</dt><dd>Temporal, async Python</dd>
+          <dt>data</dt><dd>PostgreSQL, MongoDB, web data at volume</dd>
+          <dt>models</dt><dd>fine-tuned for the task, evaluated on it</dd>
+          <dt>since</dt><dd>2014, shipping in the open</dd>
+        </dl>
+      </section>
+
+      <!-- To add a project, copy one <a class="node"> block. Newest first. -->
+      <section class="step" id="projects">
+        <div class="step__head">
+          <h2>things that earned their keep</h2>
+          <span class="label">step 02 · shipped</span>
+        </div>
+        <div class="nodes">
+          <a class="node" href="https://github.com/realslimshanky/Spider-Sense" target="_blank" rel="noopener">
+            <div class="node__top"><span>2019 — 2025</span><span>extension</span></div>
             <h3>Spider-Sense</h3>
             <p>Monitor your spiders deployed on Scrapy Cloud without leaving the browser tab you are already in.</p>
-            <ul class="tags mono"><li>JavaScript</li><li>Scrapy Cloud</li><li>★ 16</li></ul>
-          </div>
-          <span class="card__arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="card card--accent card--side" href="https://github.com/realslimshanky" target="_blank" rel="noopener">
-          <div class="card__top mono"><span>2014 — now</span><span>GitHub</span></div>
-          <div class="card__body">
-            <h3>114 public repos</h3>
-            <p>Over a decade of shipping in the open: scrapers, tooling, ML experiments, and forks of projects worth fixing.</p>
-          </div>
-          <span class="card__big serif" aria-hidden="true">git</span>
-          <span class="card__arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- ───────────── Workbench (hobby projects) ───────────── -->
-    <section class="workbench" id="workbench">
-      <header class="section-head section-head--split">
-        <div>
-          <p class="eyebrow mono">(02) — The workbench</p>
-          <h2 class="section-title">Side quests, <span class="serif">experiments &amp; half-built ideas.</span></h2>
+            <div class="node__tags"><span>JavaScript</span><span>Scrapy Cloud</span><span>16 ★</span></div>
+          </a>
+          <a class="node" href="https://github.com/realslimshanky/Pricy" target="_blank" rel="noopener">
+            <div class="node__top"><span>2026</span><span>ml</span></div>
+            <h3>Pricy</h3>
+            <p>ML Zoomcamp capstone: a price-prediction model trained, packaged and served behind an API.</p>
+            <div class="node__tags"><span>Python</span><span>ML</span><span>API</span></div>
+          </a>
+          <a class="node" href="https://github.com/realslimshanky/Hearty" target="_blank" rel="noopener">
+            <div class="node__top"><span>2025</span><span>ml</span></div>
+            <h3>Hearty</h3>
+            <p>ML Zoomcamp midterm, from notebook exploration through to a trained model.</p>
+            <div class="node__tags"><span>Python</span><span>Jupyter</span></div>
+          </a>
         </div>
-        <div class="filters mono" role="tablist" aria-label="Filter projects by status">
-          <button type="button" role="tab" aria-selected="true" data-filter="all">All <sup></sup></button>
-          <button type="button" role="tab" aria-selected="false" data-filter="shipped">Shipped <sup></sup></button>
-          <button type="button" role="tab" aria-selected="false" data-filter="tinkering">Tinkering <sup></sup></button>
-          <button type="button" role="tab" aria-selected="false" data-filter="idea">Ideas <sup></sup></button>
+      </section>
+
+      <section class="step" id="community">
+        <div class="step__head">
+          <h2>off the clock</h2>
+          <span class="label">step 03 · side effects</span>
         </div>
-      </header>
+        <p>
+          I tinker with side projects and look for a good meetup. A room full of people
+          swapping half-working demos is still my favourite way to learn something new,
+          and the best conversations tend to happen right after the talks end.
+        </p>
+        <p class="dim">In Berlin and know a good one? Tell me. And yes, I write code in dark mode.</p>
+      </section>
 
-      <ol class="bench" data-bench>
-        <!-- Rendered from assets/js/projects.js -->
-      </ol>
-      <noscript><p class="mono">Enable JavaScript to see the workbench, or browse <a href="https://github.com/realslimshanky">github.com/realslimshanky</a>.</p></noscript>
-    </section>
+      <section class="step out" id="contact">
+        <div class="step__head">
+          <h2>output</h2>
+          <span class="label">step 04 · contact</span>
+        </div>
+        <a class="big" href="https://www.linkedin.com/in/shashankkumarkushwaha/" target="_blank" rel="noopener">
+          let's build something good <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <ul class="links">
+          <li><a href="https://shanky.dev/blog">blog ↗</a></li>
+          <li><a href="https://github.com/realslimshanky" target="_blank" rel="noopener">github ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/shashankkumarkushwaha/" target="_blank" rel="noopener">linkedin ↗</a></li>
+        </ul>
+      </section>
 
-    <!-- ───────────── Community ───────────── -->
-    <section class="community" id="community">
-      <header class="section-head">
-        <p class="eyebrow mono">(03) — Community</p>
-        <h2 class="section-title">Code is better <span class="serif">with people around it.</span></h2>
-      </header>
-      <p class="community__note">
-        I love meetups. A room full of people swapping half-working demos is still
-        my favourite way to learn something new, and the best conversations tend to
-        happen right after the talks end.
-        <span class="serif">In Berlin and know a good one? Tell me.</span>
-      </p>
-    </section>
+    </div>
 
-    <!-- ───────────── Contact ───────────── -->
-    <section class="contact" id="contact">
-      <p class="eyebrow mono">(04) — Contact</p>
-      <a class="contact__big" href="https://www.linkedin.com/in/shashankkumarkushwaha/" target="_blank" rel="noopener">
-        <span class="contact__line">Let’s build</span>
-        <span class="contact__line serif">something good<span class="accent">→</span></span>
-      </a>
-      <ul class="contact__links mono">
-        <li><a href="https://shanky.dev/blog">Blog <span>↗</span></a></li>
-        <li><a href="https://github.com/realslimshanky" target="_blank" rel="noopener">GitHub <span>↗</span></a></li>
-        <li><a href="https://www.linkedin.com/in/shashankkumarkushwaha/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a></li>      </ul>
-    </section>
-  </main>
+    <footer>
+      <span class="label">© 2026 shashank kumar</span>
+      <span class="label">hand-built. no frameworks were harmed.</span>
+    </footer>
 
-  <footer class="footer mono">
-    <span>© <span data-year>2026</span> Shashank Kumar</span>
-    <span class="hide-sm">Hand-built. No frameworks were harmed.</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
-  <script src="assets/js/projects.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <script type="module" src="assets/js/hero.js"></script>
+  </div>
 </body>
 </html>
